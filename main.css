@@ -229,6 +229,48 @@ p {
 
 /*responsive tweaks*/
 @media (max-width: 768px) {
+     /* 1) Stack the layout */
+    .layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 2) Completely reset the sidebar into a top nav */
+    .sidebar {
+        position: fixed !important;   /* pin it to the viewport */
+        top: 0 !important;            /* start at the top */
+        left: 0 !important;           /* span full width */
+        right: 0 !important;
+        bottom: auto !important;      /* don’t stretch to bottom */
+        width: 100% !important;       /* full‐bleed width */
+        height: auto !important;      /* shrink to its content */
+        background: var(--gray-200) !important; /* choose your header color */
+        box-shadow: none !important;  /* remove side shadows */
+        overflow: visible !important; /* show any overflow normally */
+        padding: var(--space-2) 0 !important; /* vertical padding only */
+        z-index: 1000 !important;     /* sit above the content */
+    }
+
+  /* 3) Lay out the links in a horizontal row */
+    .sidebar nav ul {
+        display: flex !important;
+        justify-content: center !important;
+        gap: var(--space-4) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    .sidebar nav li {
+        margin: 0 !important;         /* remove desktop’s stacked spacing */
+    }
+
+    /* 4) Push page content below the now‐fixed top bar */
+    .content {
+        margin-left: 0 !important;                                         /* no left-offset */
+        padding-top: calc(var(--space-2) * 10) !important;     /* enough to clear nav height */
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -244,37 +286,6 @@ p {
     }
     #about-intro .avatar {
         margin-bottom: var(--space-4);
-    }
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        top: auto;
-        bottom: auto;
-        left: auto;
-        box-shadow: none;
-        background: var(--bg);
-        padding: var(--space-2) 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .sidebar nav ul {
-        display: flex;
-        gap: var(--space-4);
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .sidebar nav li + li {
-        margin-top: 0;
-    }
-
-    .content {
-        margin-left: 0;
-        padding-top: calc(var(--space-6) + var(--space-2));
     }
 }
 
