@@ -184,6 +184,10 @@ p {
   .button {
     background: var(--primary);
   }
+  .skills-grid li{
+      background: var(--gray-800);
+      color: var(--gray-50);
+  }
 }
 
 /*hero*/
@@ -315,3 +319,61 @@ p {
     box-shadow: var(--shadow-md);
 }
 
+.hero-highlights {
+    list-style: none;
+    margin-top: var(--space-4);
+}
+.hero-highlights li {
+    margin-bottom: var(--space-2);
+    font-weight: 500;
+}
+.hero-highlights a {
+    text-decoration: underline;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-3);
+    list-style: none;
+    margin-top: var(--space-4);
+}
+.skills-grid li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--gray-100);
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-weight: 500;
+}
+
+/*about page gradient*/
+#about-intro {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6) var(--space-5);
+    color: #fff;
+    overflow: hidden;
+    margin-bottom: var(--space-6);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+#about-intro .avatar {
+    border: 4px solid #fff;
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+    #about-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    #about-intro .avatar {
+        margin-bottom: var(--space-4);
+    }
+}
