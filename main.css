@@ -61,6 +61,8 @@ body {
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
   --shadow-lg: 0 10px 15px rgba(0,0,0,0.15);
+
+    --sidebar-width: 240px;
 }
 
 /*base style elements*/
@@ -222,4 +224,70 @@ p {
     .hero-avatar {
         margin: 0 auto;
     }
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: var(--sidebar-width);
+    background: var(--gray-200);
+    padding: var(--space-4) var(--space-2);
+    box-shadow: var(--shadow-md);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav li + li {
+  margin-top: var(--space-3);
+}
+
+.sidebar a {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* 3. Main content offset */
+.content {
+  margin-left: var(--sidebar-width);
+  flex-grow: 1;
+  padding: var(--space-6) var(--space-5);
+}
+
+/* 4. Responsive collapse */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+  }
+  .sidebar nav ul {
+    display: flex;
+    gap: var(--space-4);
+  }
+  .content {
+    margin-left: 0;
+  }
 }
