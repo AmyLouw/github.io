@@ -237,6 +237,45 @@ p {
     .hero-avatar {
         margin: 0 auto;
     }
+
+    #about-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    #about-intro .avatar {
+        margin-bottom: var(--space-4);
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        box-shadow: none;
+        background: var(--bg);
+        padding: var(--space-2) 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        gap: var(--space-4);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .sidebar nav li + li {
+        margin-top: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        padding-top: calc(var(--space-6) + var(--space-2));
+    }
 }
 
 .layout {
@@ -366,14 +405,4 @@ p {
 #about-intro .avatar {
     border: 4px solid #fff;
     box-shadow: var(--shadow-md);
-}
-
-@media (max-width: 768px) {
-    #about-intro {
-        flex-direction: column;
-        text-align: center;
-    }
-    #about-intro .avatar {
-        margin-bottom: var(--space-4);
-    }
 }
