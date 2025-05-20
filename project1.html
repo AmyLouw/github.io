@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project One — My Portfolio</title>
-  <!-- link to your main stylesheet -->
+  <title>Project: Portfolio Website — My Portfolio</title>
   <link rel="stylesheet" href="main.css" />
 </head>
 <body>
   <div class="layout">
-    <!-- Sidebar (same as your other pages) -->
+    <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <nav>
         <ul>
@@ -21,25 +20,68 @@
       </nav>
     </aside>
 
-    <!-- Main content -->
+    <!-- Main Content -->
     <main class="content">
+      <!-- Project Hero Section -->
       <section class="project-hero">
-        <h1>Project One</h1>
-        <p>A short tagline or summary of the project.</p>
+        <h1>Portfolio Website Creation</h1>
+        <p class="lead">Designing and developing my personal portfolio using HTML, CSS, and JavaScript, then deploying via GitHub Pages.</p>
       </section>
 
-      <section class="project-details">
+      <!-- Overview Section -->
+      <section class="project-details container">
         <h2>Overview</h2>
-        <p>Describe the goals, your role, technologies used, challenges, etc.</p>
+        <p>This project involved building a professional, responsive portfolio site from scratch. It showcases my skills, projects, and background in a clean, modern design. Key goals included accessibility, performance, and maintainability.</p>
 
-        <h2>Screenshots</h2>
-        <img src="assets/img/project1-screenshot.jpg" alt="Screenshot of Project One">
-
-        <h2>Links</h2>
+        <h3>Goals</h3>
         <ul>
-          <li><a href="https://github.com/yourusername/project-one" target="_blank">Source Code</a></li>
-          <li><a href="https://project-one-demo.netlify.app" target="_blank">Live Demo</a></li>
+          <li>Create a lightweight, fast-loading static site.</li>
+          <li>Implement a consistent design system using CSS custom properties.</li>
+          <li>Ensure mobile-first, responsive layouts with Flexbox and Grid.</li>
+          <li>Deploy seamlessly to GitHub Pages with automatic updates.</li>
         </ul>
+      </section>
+
+      <!-- Process Section -->
+      <section class="container">
+        <h2>Development Process</h2>
+        <ol>
+          <li><strong>Planning & Wireframes:</strong> Sketched site structure, navigational flow, and key sections (Home, About, Projects, Contact).</li>
+          <li><strong>HTML Structure:</strong> Wrote semantic markup with reusable components (header, sidebar, hero, cards).</li>
+          <li><strong>Design Tokens:</strong> Defined colors, spacing, typography scales in <code>:root</code> for consistency.</li>
+          <li><strong>Responsive Styling:</strong> Used media queries, flex and grid utilities to adapt layout across breakpoints.</li>
+          <li><strong>Interactive Elements:</strong> Added smooth-scroll, mobile navigation toggle via vanilla JavaScript.</li>
+          <li><strong>Testing & Optimization:</strong> Verified accessibility (alt text, ARIA roles), performance (image optimization, minification), and cross-browser support.</li>
+          <li><strong>Deployment:</strong> Pushed to GitHub repo <code>username.github.io</code> and configured Pages settings.</li>
+        </ol>
+      </section>
+
+      <!-- Tech Stack Section -->
+      <section class="container">
+        <h2>Tech Stack</h2>
+        <ul>
+          <li>HTML5 & Semantic Markup</li>
+          <li>CSS3 (Custom Properties, Flexbox, Grid)</li>
+          <li>JavaScript ES6+</li>
+          <li>Git & GitHub Pages</li>
+          <li>Image Optimization (WebP, SVG icons)</li>
+        </ul>
+      </section>
+
+      <!-- Challenges & Learnings Section -->
+      <section class="container">
+        <h2>Challenges & Learnings</h2>
+        <p><strong>CSS Variable Scope:</strong> Learned to declare design tokens in <code>:root</code> for global access.</p>
+        <p><strong>Responsive Navigation:</strong> Built a fixed sidebar with a mobile-friendly toggle for narrow viewports.</p>
+        <p><strong>Dark Mode Support:</strong> Implemented <code>prefers-color-scheme</code> media queries for theme adjustments.</p>
+        <p><strong>Deployment Workflow:</strong> Gained experience with GitHub Pages, custom domains, and HTTPS setup.</p>
+      </section>
+
+      <!-- Outcome & Next Steps Section -->
+      <section class="container">
+        <h2>Outcome & Next Steps</h2>
+        <p>The portfolio site now serves as my professional gateway, effectively highlighting my work and skills. Future enhancements include adding case study deep-dives, integrating a blog with static site generation, and experimenting with advanced CSS animations.</p>
+        <a href="https://github.com/yourusername/yourusername.github.io" target="_blank" class="button">View Source on GitHub</a>
       </section>
     </main>
   </div>
