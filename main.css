@@ -228,6 +228,27 @@ p {
     border: 4px solid var(--primary);
 }
 
+.hero-ctas {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-5);
+}
+
+.button-linkedin {
+    background: #0e76a8;
+}
+.button-linkedin:hover {
+    background: #095683;
+}
+
+.button-github {
+    background: #6e5494;
+}
+.button-github:hover {
+    background: #5b3e80;
+}
+
 /*responsive tweaks*/
 @media (max-width: 768px) {
      /* 1) Stack the layout */
@@ -287,6 +308,12 @@ p {
     }
     #about-intro .avatar {
         margin-bottom: var(--space-4);
+    }
+
+    .grid,
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
     }
 }
 
